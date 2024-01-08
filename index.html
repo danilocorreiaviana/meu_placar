@@ -12,6 +12,7 @@
             padding: 0;
             background: rgb(0, 29, 61);
             color: #fff;
+            overflow: auto;
         }
 
         .navbar {
@@ -53,18 +54,21 @@
             margin: 0 auto;
             padding-top: 180px;
             padding-bottom: 200px;
+            overflow: auto;
         }
 
         .result-div {
             background-color: rgb(0, 53, 102);
             border-radius: 20px;
-            width: 500px;
+            width: 100%;
+            max-width: 500px;
             box-shadow: #333 1px;
             margin-top: 20px;
             margin-bottom: 20px;
+
         }
 
-        .results .result-div h3{
+        .results .result-div h3 {
             text-align: center;
             margin: 0;
             padding: 20px;
@@ -85,6 +89,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        .equip img {
+            width: 100%;
+            height: 100%;
+            max-width: 50px;
+            max-height: 50px;
         }
 
         .footer {
@@ -112,6 +123,23 @@
             text-decoration: none;
             color: yellow;
         }
+
+        @media screen and (max-width: 501px) {
+            .result-div {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .result span,
+            .equip span {
+                font-size: 15px;
+            }
+
+            .equip img {
+                width: 30px;
+                height: 30px;
+            }
+        }
     </style>
 </head>
 
@@ -126,8 +154,7 @@
             <h3>Copinha</h3>
             <div class="result">
                 <div class="equip">
-                    <img src="https://upload.wikimedia.org/wikipedia/pt/a/a6/Escudo_do_Potyguar.png" width="50px"
-                        height='50px'></img>
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/a/a6/Escudo_do_Potyguar.png"></img>
                     <span>Potyguar</span>
                 </div>
 
@@ -167,8 +194,8 @@
             <h3>Copinha</h3>
             <div class="result">
                 <div class="equip">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Ec_lemense_sp.gif/1200px-Ec_lemense_sp.gif" width="50px"
-                        height='50px'></img>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Ec_lemense_sp.gif/1200px-Ec_lemense_sp.gif"
+                        width="50px" height='50px'></img>
                     <span>Lemense</span>
                 </div>
 
@@ -188,20 +215,20 @@
             <h3>Copinha</h3>
             <div class="result">
                 <div class="equip">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Associacao-atletica-francana.png/1200px-Associacao-atletica-francana.png" width="50px"
-                        height='50px'></img>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Associacao-atletica-francana.png/1200px-Associacao-atletica-francana.png"
+                        width="50px" height='50px'></img>
                     <span>Francana</span>
                 </div>
 
                 <span>0</span>
                 <span>X</span>
                 <span>1
-                    
+
                 </span>
 
                 <div class="equip">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Escudo_Botafogo.png"
-                        width="50px" height='50px'></img>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Escudo_Botafogo.png" width="50px"
+                        height='50px'></img>
                     <span>Botafogo</span>
                 </div>
             </div>
