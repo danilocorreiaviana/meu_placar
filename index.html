@@ -431,8 +431,7 @@
             </div>
         </div> -->
 
-        <div class="button-palpite" onclick="openModalLink()"
-            target="_blank">
+        <div class="button-palpite" onclick="openModalLink()" target="_blank">
             <h4>Acesse aqui e dê seu palpite ⭐</h4>
         </div>
 
@@ -700,11 +699,15 @@
     </div>
 
     <div style="display: flex; flex-direction: column;" id="myModalLink">
-        <span style="padding: 20px;">Já tem conta?</span>
+        <div class="button-palpite" style="background-color: #2222a1; color: #fff;" onclick="closeModalLink()">
+            <h4>Ver placares</h4>
+        </div>
+        <span style="padding: 20px;">Já tem conta no Palpite Grátis EstrelaBet?</span>
         <a class="button-palpite" href="https://gratis.estrelabet.com/" target="_blank">
             <h4>SIM</h4>
         </a>
-        <a class="button-palpite" href="https://gratis.estrelabet.com/signup?referrer=64b40ada3a5b72febf494964" target="_blank">
+        <a class="button-palpite" href="https://gratis.estrelabet.com/signup?referrer=64b40ada3a5b72febf494964"
+            target="_blank">
             <h4>NÃO</h4>
         </a>
     </div>
@@ -764,19 +767,14 @@
         }
 
         function closeModalLink() {
-            document.getElementById('myModalLink').style.display = 'flex';
+            document.getElementById('myModalLink').style.display = 'none';
         }
 
         // Fechar o modal se o usuário clicar fora da área do modal
         window.onclick = function (event) {
             var modal = document.getElementById('myModal');
-            var modallink = document.getElementById('myModalLink');
             if (event.target === modal) {
                 modal.style.display = 'none';
-                stopYoutubeVideo();
-            }
-            if (event.target === modallink) {
-                modallink.style.display = 'none';
                 stopYoutubeVideo();
             }
         };
