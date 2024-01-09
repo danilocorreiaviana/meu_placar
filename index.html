@@ -61,6 +61,7 @@
             background-color: rgb(0, 53, 102);
             border-radius: 20px;
             width: 100%;
+            height: auto;
             max-width: 500px;
             box-shadow: #333 1px;
             margin-top: 20px;
@@ -89,6 +90,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 50%;
         }
 
         .equip img {
@@ -140,6 +142,95 @@
                 height: 30px;
             }
         }
+
+        .button-play {
+            background-color: #fff;
+            color: #333;
+            cursor: pointer;
+            border-radius: 15px;
+            padding: 10px;
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 20px
+        }
+
+        /* 
+        .scroll-container {
+            width: 100%;
+            max-width: 500px;
+            white-space: nowrap;
+            overflow-x: hidden;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .scroll-content {
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+            background-color: #f5f5f5;
+            margin-right: 10px;
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+
+        .scroll-container::-webkit-scrollbar-track {
+            background-color: transparent;
+        } */
+
+        #myModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        iframe {
+            width: 100%;
+            height: auto;
+            /* Ajuste conforme necessário */
+        }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+            /* Proporção de aspecto para vídeos 16:9 */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 
@@ -149,7 +240,53 @@
         <h3>Palpite grátis EstrelaBet ⭐</h3>
     </div>
 
+
     <div class="results">
+
+
+        <!-- <div class="scroll-container" id="scrollContainer" onmousedown="startDrag(event)">
+            <div class="scroll-content"></div>
+            <div class="scroll-content"></div>
+            <div class="scroll-content"></div>
+            <div class="scroll-content"></div>
+            <div class="scroll-content"></div>
+            <div class="scroll-content"></div>
+        </div>
+
+        <script>
+            var isDragging = false;
+            var startX;
+            var scrollLeft;
+
+            function startDrag(e) {
+                isDragging = true;
+                startX = e.pageX - document.getElementById('scrollContainer').offsetLeft;
+                scrollLeft = document.getElementById('scrollContainer').scrollLeft;
+
+                document.addEventListener('mousemove', drag);
+                document.addEventListener('mouseup', stopDrag);
+            }
+
+            function drag(e) {
+                if (!isDragging) return;
+                e.preventDefault();
+
+                var x = e.pageX - document.getElementById('scrollContainer').offsetLeft;
+                var walk = (x - startX) * 1.5; // Ajuste o valor para controlar a velocidade da rolagem
+
+                document.getElementById('scrollContainer').scrollLeft = scrollLeft - walk;
+            }
+
+            function stopDrag() {
+                isDragging = false;
+                document.removeEventListener('mousemove', drag);
+                document.removeEventListener('mouseup', stopDrag);
+            }
+        </script> -->
+
+        <!-- <div style="background-color: #fff; color: #333; cursor: pointer; font-weight: 600; border-radius: 20px; padding-left: 20px; padding-right: 20px;">
+            <p>08/01</p>
+        </div>
         <div class="result-div">
             <h3>Copinha</h3>
             <div class="result">
@@ -253,8 +390,261 @@
                     <span>Flamengo</span>
                 </div>
             </div>
+        </div> -->
+
+        <div
+            style="background-color: #fff; color: #333; cursor: pointer; font-weight: 600; border-radius: 20px; padding-left: 20px; padding-right: 20px;">
+            <p>09/01</p>
+        </div>
+
+        <div class="result-div">
+            <h3>Copinha</h3>
+            <div class="result">
+                <div class="equip">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/c/cf/Castanhal_EC.png"></img>
+                    <span>Castanhal</span>
+                </div>
+
+                <span></span>
+                <span>X</span>
+                <span></span>
+
+                <div class="equip">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/CRB_logo.svg/1200px-CRB_logo.svg.png"></img>
+                    <span>CRB</span>
+                </div>
+            </div>
+            <div class="button-play" onclick="openModal('IbPdao4LKHo')">
+                Assistir ao vivo
+            </div>
+        </div>
+
+        <div class="result-div">
+            <h3>Copinha</h3>
+            <div class="result">
+                <div class="equip">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Atl%C3%A9tico_Goianiense.svg/1200px-Atl%C3%A9tico_Goianiense.svg.png"></img>
+                    <span>Atlético - GO</span>
+                </div>
+
+                <span></span>
+                <span>X</span>
+                <span></span>
+
+                <div class="equip">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Escudo_Oficial_Ponte_Preta.png"></img>
+                    <span>Ponte Preta</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-div">
+            <h3>Copinha</h3>
+            <div class="result">
+                <div class="equip">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/e/ef/Escudo_Inter_de_Bebedouro.png"></img>
+                    <span>Inter de B.</span>
+                </div>
+                <span></span>
+                <span>X</span>
+                <span></span>
+
+                <div class="equip">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Gremio_logo.gif"></img>
+                    <span>Grêmio</span>
+                </div>
+
+            </div>
+            <div class="button-play" onclick="openModal('Rcz9D-TkOJM')">
+                Assistir ao vivo
+            </div>
+        </div>
+
+        <div class="result-div">
+            <h3>Copinha</h3>
+            <div class="result">
+                <div class="equip">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/b/bd/SEItapirense.png"></img>
+                    <span>Itapirense</span>
+                </div>
+
+                <span></span>
+                <span>X</span>
+                <span></span>
+
+                <div class="equip">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/EscudoCriciumaEC.svg/1200px-EscudoCriciumaEC.svg.png"></img>
+                    <span>Criciúma</span>
+                </div>
+
+            </div>
+            <div class="button-play" onclick="openModal('4hhHX2h96Yc')">
+                Assistir ao vivo
+            </div>
+        </div>
+
+
+        <div class="result-div">
+            <h3>Copinha</h3>
+            <div class="result">
+                <div class="equip">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/4/4c/GDS%C3%A3ocarlense.png"></img>
+                    <span>São Carlense</span>
+                </div>
+
+                <span></span>
+                <span>X</span>
+                <span></span>
+
+                <div class="equip">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/FFC_crest.svg/1200px-FFC_crest.svg.png"></img>
+                    <span>Fluminense</span>
+                </div>
+            </div>
+            <div class="button-play" onclick="openModal('dTROVU8lBc0')">
+                Assistir ao vivo
+            </div>
+        </div>
+
+        <div class="result-div">
+            <h3>Copinha</h3>
+            <div class="result">
+                <div class="equip">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/0c/S%C3%ADmbolo_XV_de_Ja%C3%BA.png"></img>
+                    <span>XV de Jaú</span>
+                </div>
+
+                <span></span>
+                <span>X</span>
+                <span></span>
+
+                <div class="equip">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Escudo_do_Sport_Club_Internacional.svg/2048px-Escudo_do_Sport_Club_Internacional.svg.png"></img>
+                    <span>Inter</span>
+                </div>
+            </div>
+            <div class="button-play" onclick="openModal('Xs-V4Vz94Lo')">
+                Assistir ao vivo
+            </div>
+        </div>
+
+        <div class="result-div">
+            <h3>Copinha</h3>
+            <div class="result">
+                <div class="equip">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/95/Escudo_Associa%C3%A7%C3%A3o_Ferrovi%C3%A1ria_de_Esportes.png"></img>
+                    <span>Ferroviária</span>
+                </div>
+
+                <span></span>
+                <span>X</span>
+                <span></span>
+
+                <div class="equip">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/1027px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png"></img>
+                    <span>São Paulo</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-div">
+            <h3>Copinha</h3>
+            <div class="result">
+                <div class="equip">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/01/Marilia_football.png"></img>
+                    <span>Marília</span>
+                </div>
+
+                <span></span>
+                <span>X</span>
+                <span></span>
+
+                <div class="equip">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png"></img>
+                    <span>Corinthians</span>
+                </div>
+            </div>
+            <div class="button-play" onclick="openModal('KcGDRJDo5Vs')">
+                Assistir ao vivo
+            </div>
         </div>
     </div>
+
+    <div id="myModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="player">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Inclua a API do YouTube no final do corpo do HTML -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script>
+        var player;
+        function playYouTubeVideo(videoid) {
+            // Substitua 'VIDEO_ID' pelo ID do vídeo do YouTube que você deseja reproduzir
+            var videoId = videoid;
+
+            if (player) {
+                player.loadVideoById(videoId);
+            } else {
+                player = new YT.Player('player', {
+                    videoId: videoId,
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
+        }
+
+        // Função chamada quando o player está pronto
+        function onPlayerReady(event) {
+            event.target.playVideo(); // Inicia a reprodução automaticamente
+        }
+
+        // Função chamada quando o estado do player muda
+        function onPlayerStateChange(event) {
+            // Você pode adicionar lógica adicional aqui, se necessário
+        }
+        function openModal(videoid) {
+            document.getElementById('myModal').style.display = 'flex';
+            playYouTubeVideo(videoid);
+
+        }
+
+        function stopYoutubeVideo() {
+            if (player && typeof player.pauseVideo === 'function') {
+                player.pauseVideo();
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+            stopYoutubeVideo();
+
+        }
+
+        // Fechar o modal se o usuário clicar fora da área do modal
+        window.onclick = function (event) {
+            var modal = document.getElementById('myModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                stopYoutubeVideo();
+            }
+        };
+    </script>
 
 
 </body>
