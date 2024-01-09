@@ -163,6 +163,20 @@
             margin-bottom: 20px
         }
 
+        .button-palpite {
+            display: flex;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: rgb(177, 177, 75);
+            margin-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #333;
+            cursor: pointer;
+        }
+
         /* 
         .scroll-container {
             width: 100%;
@@ -203,6 +217,20 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+
+        #myModalLink {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
             justify-content: center;
             align-items: center;
             overflow: hidden;
@@ -403,6 +431,11 @@
             </div>
         </div> -->
 
+        <div class="button-palpite" onclick="openModalLink()"
+            target="_blank">
+            <h4>Acesse aqui e dê seu palpite ⭐</h4>
+        </div>
+
         <div
             style="background-color: #fff; color: #333; cursor: pointer; font-weight: 600; border-radius: 20px; padding-left: 20px; padding-right: 20px;">
             <p>09/01</p>
@@ -469,36 +502,6 @@
             </div>
             <div>
                 <p>Finalizado</p>
-            </div>
-        </div>
-
-        <div class="result-div">
-            <h3>Copinha</h3>
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="16" width="16"
-                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                    <path
-                        d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
-                </svg>
-                <span>15h00</span>
-            </div>
-            <div class="result">
-                <div class="equip">
-                    <img src="https://upload.wikimedia.org/wikipedia/pt/e/ef/Escudo_Inter_de_Bebedouro.png"></img>
-                    <span>Inter de B.</span>
-                </div>
-                <span></span>
-                <span>X</span>
-                <span></span>
-
-                <div class="equip">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Gremio_logo.gif"></img>
-                    <span>Grêmio</span>
-                </div>
-
-            </div>
-            <div class="button-play" onclick="openModal('Rcz9D-TkOJM')">
-                Assistir ao vivo
             </div>
         </div>
 
@@ -635,6 +638,36 @@
                     <path
                         d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
                 </svg>
+                <span>19h30</span>
+            </div>
+            <div class="result">
+                <div class="equip">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/e/ef/Escudo_Inter_de_Bebedouro.png"></img>
+                    <span>Inter de B.</span>
+                </div>
+                <span></span>
+                <span>X</span>
+                <span></span>
+
+                <div class="equip">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Gremio_logo.gif"></img>
+                    <span>Grêmio</span>
+                </div>
+
+            </div>
+            <div class="button-play" onclick="openModal('Rcz9D-TkOJM')">
+                Assistir ao vivo
+            </div>
+        </div>
+
+        <div class="result-div">
+            <h3>Copinha</h3>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="16" width="16"
+                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
+                </svg>
                 <span>21h30</span>
             </div>
             <div class="result">
@@ -664,6 +697,16 @@
             <div id="player">
             </div>
         </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column;" id="myModalLink">
+        <span style="padding: 20px;">Já tem conta?</span>
+        <a class="button-palpite" href="https://gratis.estrelabet.com/" target="_blank">
+            <h4>SIM</h4>
+        </a>
+        <a class="button-palpite" href="https://gratis.estrelabet.com/signup?referrer=64b40ada3a5b72febf494964" target="_blank">
+            <h4>NÃO</h4>
+        </a>
     </div>
 
 
@@ -716,11 +759,24 @@
 
         }
 
+        function openModalLink() {
+            document.getElementById('myModalLink').style.display = 'flex';
+        }
+
+        function closeModalLink() {
+            document.getElementById('myModalLink').style.display = 'flex';
+        }
+
         // Fechar o modal se o usuário clicar fora da área do modal
         window.onclick = function (event) {
             var modal = document.getElementById('myModal');
+            var modallink = document.getElementById('myModalLink');
             if (event.target === modal) {
                 modal.style.display = 'none';
+                stopYoutubeVideo();
+            }
+            if (event.target === modallink) {
+                modallink.style.display = 'none';
                 stopYoutubeVideo();
             }
         };
@@ -730,7 +786,8 @@
 </body>
 
 <div class="footer">
-    <span>Desenvolvido por <a href="linkedin.com/in/danilo-correia-viana-3118a921a/"><b>Danilo Correia</b></a> &copy;
+    <span>Desenvolvido por <a href="https://linkedin.com/in/danilo-correia-viana-3118a921a/" target="_blank"><b>Danilo
+                Correia</b></a> &copy;
         2024</span>
 </div>
 
